@@ -10,7 +10,7 @@ Questions:
 6. How do doctors rate this medicine? 
 7. What do patients/users think about this medicine? 
 8. What are clinics in the patient/user’s city? 
-9. What information patient/user know about this clinic? (address, phone number, working hours)
+9. What information patient/user know about this clinic? (address, phone number, working hours and etc.)
 10. What do doctors work in this clinic? 
 11. How do patients rate this clinic? 
 12. How do patients rate this doctor? 
