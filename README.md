@@ -1,7 +1,7 @@
 # DB3
 
 ## Phase 3
-Questions:
+#### Questions:
 1. What are pharmacies in the patient/user’s city? 
 2. What are the medicines these pharmacies have? 
 3. Where can patients/users buy this medicine?
