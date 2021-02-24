@@ -25,4 +25,5 @@
 
 #### Datasets
 1. [HospInfo.csv](https://www.kaggle.com/cms/hospital-general-information)
+2. [Medicine_description.xlsx](https://www.kaggle.com/saratchendra/medicine-recommendation?select=Medicine_description.xlsx)
 
