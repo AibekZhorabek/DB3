@@ -42,3 +42,6 @@
 1. [HospInfo.csv](https://www.kaggle.com/cms/hospital-general-information)
 2. [Medicine_description.xlsx](https://www.kaggle.com/saratchendra/medicine-recommendation?select=Medicine_description.xlsx)
 
+## Phase4
+Our database has 24 tables.
+We have many-to-many connections, like between Doctor and Medical_Center, but because of database server cannot display this connection, we created new table Doctor_Medical_center. Also we have a lot of one-to-many connections between our tables, for example Appointment and User, User and Role, etc.
