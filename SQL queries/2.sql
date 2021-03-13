@@ -1,3 +1,4 @@
+--What are the medicines these pharmacies have?
 SELECT ph_name,m_name 
 FROM medicine_pharmacy
 INNER JOIN status
