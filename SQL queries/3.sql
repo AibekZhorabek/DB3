@@ -1,3 +1,4 @@
+--Where can patients/users buy this medicine?
 SELECT ph_name,ph_address
 FROM medicine_pharmacy
 INNER JOIN medicine
