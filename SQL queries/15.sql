@@ -1,0 +1,8 @@
+INSERT INTO `doctor` (`d_id`, `d_email`, `d_password`, `d_name`, `d_surname`, `d_phone`, `d_gender`, `d_briefInfo`, `d_experience`, `d_statusId`) 
+VALUES (NULL, 'doctor4', '826ac497ff8f9af9a8ed640c7830c38d', 'Doctor4', 'Doctor4Surname', '+77272410206', 'male', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed varius vel purus nec tempor. Vivamus id ligula fermentum, convallis dolor ac, gravida libero. Cras viverra justo non sem varius vulputate. Phasellus et leo congue, convallis metus eu, porttitor lacus. Duis sit amet elit et nibh euismod convallis. Pellentesque suscipit, nunc id maximus gravida, nisl velit sollicitudin enim, in cursus libero quam et nisi. Morbi scelerisque diam vitae elit malesuada, eget vestibulum mi varius. Fusce luctus nisi vel fringilla viverra. Quisque hendrerit nisl vitae arcu facilisis, in euismod enim ullamcorper. Morbi a ornare erat. Nunc sit amet ex suscipit, consequat tellus et, fermentum arcu. Mauris mauris lectus, egestas sed eros vel, interdum tristique lacus. In aliquet at lectus commodo viverra. Integer ornare molestie gravida.', '25', '2');
+
+INSERT INTO `pharmacy`(`ph_id`, `ph_name`, `ph_address`, `ph_phone`, `ph_statusId`, `ph_cityId`) 
+VALUES (NULL,[pharmacy_name],[pharmacy_address],[pharmacy_phone],2,[pharmacy_city]);
+
+INSERT INTO `medical_center`(`mc_id`, `mc_name`, `mc_phone`, `mc_address`, `mc_type`, `mc_briefInfo`, `mc_info`, `mc_statusId`, `mc_cityId`, `mc_clinicGroupId`) 
+VALUES (NULL,[medical_center_name],[medical_center_phone],[medical_center_address],[medical_center_type],[medical_center_briefInfo],[medical_center_info],2,[medical_center_city],[medical_center_clinic_group]);
