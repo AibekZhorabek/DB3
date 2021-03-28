@@ -47,6 +47,9 @@ Our database has 24 tables.
 We have many-to-many connections, like between Doctor and Medical_Center, but because of database server cannot display this connection, we created new table Doctor_Medical_center. Also we have a lot of one-to-many connections between our tables, for example Appointment and User, User and Role, etc.
 
 ## Phase6
+Database: MySQL
+PL: Java
+
 #### Connection to database
 For the connection with database, we created class ConnectionPool, which takes DB parameters(driver,username,password,url,poolSize) and initializes the pool with 5 connection.
 1. Set database parameters
@@ -112,3 +115,44 @@ public synchronized Connection takeConnection(){
         }
     }
 ```
+
+#### Retrieving data from database
+As earlier mentioned, we use DAOs for getting datas from our database. We created interface and their implementations for entities that our web application will interact.
+
+For example: What are pharmacies in the patient/user’s city?
+
+1. Declare method and name it, give parameters if needed. In PharmacyDAO:
+```java
+List<Pharmacy> getByCityId(Long id) throws SQLException;
+```
+2. Implement this interface and prepare your query.
+```java
+private static final String SELECT_BY_CITY_ID = "SELECT ph_id, ph_name, ph_address, ph_phone, s_id, s_name, c_id, c_name " +
+            "FROM pharmacy INNER JOIN status s on pharmacy.ph_statusId = s.s_id INNER JOIN city c2 on pharmacy.ph_cityId = c2.c_id WHERE ph_cityId=? AND s_name='running'";
+```
+3. Implement the method, take connection from connection pool and retrieve data from pharmacy table,then add it to list.
+```java
+public List<Pharmacy> getByCityId(Long id) throws SQLException {
+        List<Pharmacy> pharmacies = new ArrayList<>();
+        connectionPool = ConnectionPool.getInstance();
+        connection = connectionPool.takeConnection();
+        try(PreparedStatement preparedStatement = connection.prepareStatement(SELECT_BY_CITY_ID)){
+            preparedStatement.setLong(1,id);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while(resultSet.next()){
+                Pharmacy pharmacy = new Pharmacy();
+                setPharmacyParameters(resultSet,pharmacy);
+                pharmacies.add(pharmacy);
+            }
+        }finally {
+            connectionPool.releaseConnection(connection);
+        }
+        return pharmacies;
+    }
+```
+4. Finally, show it on your page
+In one city:
+![Снимок экрана (263)](https://user-images.githubusercontent.com/76391010/112762071-c1846f80-901f-11eb-9eb6-6f9ec083c21c.png)
+In another city:
+![Снимок экрана (264)](https://user-images.githubusercontent.com/76391010/112762078-c8ab7d80-901f-11eb-87b7-83f7413da67b.png)
+
