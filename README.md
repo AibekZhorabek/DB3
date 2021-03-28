@@ -45,3 +45,70 @@
 ## Phase4
 Our database has 24 tables.
 We have many-to-many connections, like between Doctor and Medical_Center, but because of database server cannot display this connection, we created new table Doctor_Medical_center. Also we have a lot of one-to-many connections between our tables, for example Appointment and User, User and Role, etc.
+
+## Phase6
+#### Connection to database
+For the connection with database, we created class ConnectionPool, which takes DB parameters(driver,username,password,url,poolSize) and initializes the pool with 5 connection.
+1. Set database parameters
+```java
+private void setDBParameters(){
+        DBResourceManager dbResourceManager = DBResourceManager.getInstance();
+        this.driverName = dbResourceManager.getValue(DBParameter.DB_DRIVER);
+        this.url = dbResourceManager.getValue(DBParameter.DB_URL);
+        this.user = dbResourceManager.getValue(DBParameter.DB_USER);
+        this.password = dbResourceManager.getValue(DBParameter.DB_PASSWORD);
+        try{
+            this.poolSize = Integer.parseInt(dbResourceManager.getValue(DBParameter.DB_POOL_SIZE));
+        }catch (NumberFormatException e){
+            poolSize = 5;
+        }
+    }
+```
+2. Initialize pool
+```java
+private void initPoolData(){
+        Connection connection;
+        try{
+            Class.forName(driverName);
+            availableConnections = new ArrayBlockingQueue<>(poolSize);
+            for(int i = 0; i < poolSize; i++){
+                connection = DriverManager.getConnection(url,user,password);
+                availableConnections.put(connection);
+            }
+
+        }catch (ClassNotFoundException e ){
+            LOGGER.error("Can't find database driver class",e);
+        }catch (SQLException e){
+            LOGGER.error("SQLException in ConnectionPool",e);
+        } catch (InterruptedException e) {
+            LOGGER.error(e);
+        }
+    }
+```
+3. With method takeConnection(), our DAOs take connection and release it after they finished.
+```java
+public synchronized Connection takeConnection(){
+        Connection connection = null;
+        if(availableConnections.size() == 0){
+            LOGGER.warn("All connections are used");
+        }
+        else {
+            try {
+                connection = availableConnections.take();
+            } catch (InterruptedException e) {
+                LOGGER.error("Error connecting to the data source", e);
+            }
+        }
+        return connection;
+    }
+
+    public synchronized void releaseConnection(Connection connection){
+        if(connection != null){
+            try{
+                availableConnections.put(connection);
+            } catch (InterruptedException e) {
+                LOGGER.error(e);
+            }
+        }
+    }
+```
