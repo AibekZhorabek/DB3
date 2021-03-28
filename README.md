@@ -161,4 +161,11 @@ In another city:
 ![Снимок экрана (262)](https://user-images.githubusercontent.com/76391010/112762192-3e174e00-9020-11eb-980f-a9b6b4c72215.png)
 2. Search
 ![Снимок экрана (265)](https://user-images.githubusercontent.com/76391010/112762220-58512c00-9020-11eb-9dc3-5f18ce30de23.png)
-
+3. Medicines
+![Снимок экрана (266)](https://user-images.githubusercontent.com/76391010/112762317-dca3af00-9020-11eb-9d9e-00f0c64622a0.png)
+4. Medical Centers
+![Снимок экрана (267)](https://user-images.githubusercontent.com/76391010/112762329-ec22f800-9020-11eb-9e91-f65514c761ae.png)
+5. Doctors
+![Снимок экрана (270)](https://user-images.githubusercontent.com/76391010/112762348-08269980-9021-11eb-9d90-85e45fb82492.png)
+6. Search Doctor
+![Снимок экрана (269)](https://user-images.githubusercontent.com/76391010/112762370-1c6a9680-9021-11eb-9a80-7b4372e050be.png)
