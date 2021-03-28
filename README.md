@@ -156,3 +156,9 @@ In one city:
 In another city:
 ![Снимок экрана (264)](https://user-images.githubusercontent.com/76391010/112762078-c8ab7d80-901f-11eb-87b7-83f7413da67b.png)
 
+#### Other pages
+1. Main
+![Снимок экрана (262)](https://user-images.githubusercontent.com/76391010/112762192-3e174e00-9020-11eb-980f-a9b6b4c72215.png)
+2. Search
+![Снимок экрана (265)](https://user-images.githubusercontent.com/76391010/112762220-58512c00-9020-11eb-9dc3-5f18ce30de23.png)
+
