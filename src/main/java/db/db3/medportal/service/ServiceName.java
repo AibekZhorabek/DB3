@@ -60,5 +60,11 @@ public class ServiceName {
     static final String ADD_MEDICINE_BY_PHARMACY_SERVICE = "/addMedicineByPharmacy";
     static final String CHANGE_LANGUAGE_SERVICE = "/changeLanguage";
     static final String GO_PAGE_NOT_FOUND_ERROR_SERVICE = "/error-404";
+    static final String PREPARE_MAIN_PAGE_SERVICE = "/main";
+    static final String CHANGE_CITY_SERVICE = "/changeCity";
+    static final String PREPARE_PHARMACIES_SERVICE = "/pharmacies";
+    static final String PREPARE_MEDICINES_SERVICE = "/medicines";
+    static final String PREPARE_MEDICAL_CENTERS_SERVICE = "/medical-centers";
+    static final String PREPARE_DOCTORS_SERVICE = "/doctors";
 
 }

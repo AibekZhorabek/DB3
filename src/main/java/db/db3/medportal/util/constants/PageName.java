@@ -4,7 +4,8 @@ public class PageName {
 
     private PageName(){}
 
-    public static final String MAIN_PAGE = "/index.jsp";
+    public static final String INDEX_PAGE = "/index.jsp";
+    public static final String MAIN_PAGE = "/main.jsp";
     public static final String REGISTRATION_PAGE = "/registration.jsp";
     public static final String LOGIN_PAGE = "/login.jsp";
     public static final String ALL_PHARMACY_PAGE = "/allPharmacy.jsp";
@@ -31,6 +32,9 @@ public class PageName {
     public static final String ADD_MEDICINE_BY_PHARMACY_PAGE = "/addMedicineByPharmacy.jsp";
     public static final String PAGE_NOT_FOUND_ERROR_PAGE = "/pageNotFoundError.jsp";
     public static final String INTERNAL_SERVER_ERROR_PAGE = "/500ErrorPage.jsp";
+    public static final String SELECT_CITY_PAGE = "/selectCity.jsp";
+    public static final String MEDICAL_CENTERS_PAGE = "/medicalCenters.jsp";
+
 
 
 

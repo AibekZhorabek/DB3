@@ -13,6 +13,17 @@ public class RequestParameterName {
     public static final String SUCCESSFUL_REGISTRATION = "successReg";
     public static final String SUCCESSFUL_REGISTRATION_MSG = "success.reg";
     public static final String CURRENT_LANGUAGE_SESSION = "currentLanguage";
+    public static final String CURRENT_CITY_SESSION = "currentCity";
+    public static final String ALL_MEDICAL_CENTERS = "allMedCenters";
+    public static final String ALL_PHARMACY = "allPharmacy";
+    public static final String ALL_CITY = "allCity";
+    public static final String POPULAR_PHARMACIES = "popularPharmacies";
+    public static final String PHARMACIES_BY_CITY_ID = "pharmaciesByCityId";
+    public static final String MEDICAL_CENTERS_BY_CITY_ID = "medCentersByCityId";
+    public static final String POPULAR_CLINIC_GROUPS = "popularClinicGroups";
+    public static final String POPULAR_MEDICINES = "popularMedicines";
+    public static final String POPULAR_PROFESSIONS = "popularProfessions";
+    public static final String DOCTORS_FROM_CITY = "doctorsFromCity";
 
     public static final String USER_EMAIL = "email";
     public static final String USER_PHONE = "phone";
@@ -28,8 +39,6 @@ public class RequestParameterName {
     public static final String DOCTOR_EXPERIENCE = "doctorExperience";
 
 
-    public static final String ALL_PHARMACY = "allPharmacy";
-    public static final String ALL_CITY = "allCity";
     public static final String CITY_OF_PHARMACY = "cityOfPharmacy";
     public static final String PHARMACY = "pharmacy";
     public static final String MEDICINE_OF_PHARMACY = "medicineOfPharmacy";

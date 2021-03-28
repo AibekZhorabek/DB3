@@ -16,6 +16,13 @@ public class ServiceFactory {
 
     static{
         SERVICES.put(GO_PAGE_NOT_FOUND_ERROR_SERVICE,new GoPageNotFoundErrorService());
+        SERVICES.put(PREPARE_MAIN_PAGE_SERVICE,new PrepareMainPageService());
+        SERVICES.put(CHANGE_LANGUAGE_SERVICE,new ChangeLanguageService());
+        SERVICES.put(CHANGE_CITY_SERVICE,new ChangeCityService());
+        SERVICES.put(PREPARE_PHARMACIES_SERVICE,new PreparePharmaciesService());
+        SERVICES.put(PREPARE_MEDICINES_SERVICE,new PrepareMedicinesService());
+        SERVICES.put(PREPARE_MEDICAL_CENTERS_SERVICE,new PrepareMedicalCentersService());
+        SERVICES.put(PREPARE_DOCTORS_SERVICE,new PrepareDoctorsService());
     }
 
     public Service getService(String serviceName){
