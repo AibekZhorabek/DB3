@@ -170,3 +170,6 @@ In another city:
 ![Снимок экрана (270)](https://user-images.githubusercontent.com/76391010/112762348-08269980-9021-11eb-9d90-85e45fb82492.png)
 6. Search Doctor
 ![Снимок экрана (269)](https://user-images.githubusercontent.com/76391010/112762370-1c6a9680-9021-11eb-9a80-7b4372e050be.png)
+
+## Phase 10
+[Project Final Report](https://github.com/AibekZhorabek/DB3/blob/main/ProjectFinalReport.pdf)
