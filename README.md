@@ -172,5 +172,5 @@ In another city:
 ![Снимок экрана (269)](https://user-images.githubusercontent.com/76391010/112762370-1c6a9680-9021-11eb-9a80-7b4372e050be.png)
 
 ## Phase 10
-[Project Final Report](https://github.com/AibekZhorabek/DB3/blob/main/ProjectFinalReport.pdf)
-[Presentation Video](https://github.com/AibekZhorabek/DB3/blob/main/PresentationVideo.mp4)
+1. [Project Final Report](https://github.com/AibekZhorabek/DB3/blob/main/ProjectFinalReport.pdf)
+2. [Presentation Video](https://github.com/AibekZhorabek/DB3/blob/main/PresentationVideo.mp4)
